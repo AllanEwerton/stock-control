@@ -1,12 +1,47 @@
 @import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source "../**/*.blade.php";
-@source "../**/*.js";
-@source "../**/*.vue";
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* Removed unsupported @source and @theme rules */
+/* Estilos Globais */
+body {
+ @apply bg-gray-900 text-white font-sans;
 }
+
+/* Cabeçalho */
+header {
+    @apply bg-gradient-to-r from-indigo-950 via-cyan-600 to-emerald-950 py-4 shadow-lg;
+}
+
+header .container {
+    @apply container flex justify-between items-center px-6 mx-auto;
+}
+
+header nav {
+    @apply hidden lg:flex space-x-6;
+}
+
+header nav ul {
+    @apply flex space-x-6;
+}
+
+header nav a {
+    @apply hover:text-gray-300 hover:bg-gray-700 px-4 py-2 rounded-md;
+}
+
+/* Main */
+main {
+    @apply bg-gray-900 p-5 ;
+}
+
+/* Rodapé */
+footer {
+    @apply bg-gradient-to-r from-indigo-950 via-cyan-600 to-emerald-950 py-4 text-center;
+}
+
+footer p {
+    @apply text-white italic
+
+}
+
+
+
+
