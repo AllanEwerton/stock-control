@@ -20,10 +20,13 @@
             <nav class="p-4">
                 <ul>
                     <li class="mb-2">
-                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📊 <span class="ml-3">Dashboard</span></a>
+                        <a href="" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📊 <span class="ml-3">Central</span></a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📁 <span class="ml-3">Documentos</span></a>
+                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📁 <span class="ml-3">Produtos</span></a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📁 <span class="ml-3">Categoria</span></a>
                     </li>
                     <li class="mb-2">
                         <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">⚙️ <span class="ml-3">Configurações</span></a>

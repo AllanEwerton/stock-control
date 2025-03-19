@@ -32,7 +32,7 @@
                     type="email"
                     id="email"
                     name="email"
-                    class="w-full p-3 mt-2 border border-gray-600 rounded-lg"
+                    class="w-full p-3 mt-2 border border-gray-600 rounded-lg text-black"
                     placeholder="Digite seu e-mail"
                     value="{{ old('email') }}"
                 >
@@ -44,7 +44,7 @@
                     type="password"
                     id="password"
                     name="password"
-                    class="w-full p-3 mt-2 border border-gray-600 rounded-lg"
+                    class="w-full p-3 mt-2 border border-gray-600 rounded-lg text-black"
                     placeholder="Digite sua senha"
                 >
             </div>

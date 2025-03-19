@@ -23,9 +23,9 @@
                 <!-- Navegação -->
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/login">Entrar</a></li>
-                        <li><a href="/cadastro">Cadastre-se</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('autenticar') }}">Entrar</a></li>
+                        <li><a href="{{ route('cadastro') }}">Cadastre-se</a></li>
                     </ul>
                 </nav>
             </div>
