@@ -1,14 +1,18 @@
 <?php
 
 use App\Http\Controllers\PodutoController;
+use App\Http\Controllers\UserContrller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 });
-route::get('/login', function(){
-    return view('login.login');})->name('login');
-    route::get('/cadastro', function(){
+route::get('/login', [UserContrller::class, 'index'])->name('login');
+Route::post('/login', [UserContrller::class, 'login'])->name('autenticar');
+route::get('/cadastro', function(){
         return view('login.cadastro');})->name('cadastro');
+
+route::get('/dashboard', function(){
+        return view('login.dashboard');})->name('dashboard');
 
 Route::resource('produtos', PodutoController::class);

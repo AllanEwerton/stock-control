@@ -41,7 +41,9 @@ footer p {
     @apply text-white italic
 
 }
-
+div .text-error {
+    @apply text-red-600 font-bold 
+}
 
 
 
