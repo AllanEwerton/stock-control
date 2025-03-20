@@ -27,7 +27,7 @@ class UserContrller extends Controller
             'password.required' => 'O campo senha é obrigatório',
             'password.min' => 'O campo senha deve ter no mínimo 6 caracteres',
         ]);
-        if (auth::attempt($credencias)) {
+        if (auth::attempt($credencias, $request->remember)) {
             $request->session()->regenerate();
             return redirect()->route('dashboard');
 

@@ -62,7 +62,7 @@
             </button>
 
             <div class="mt-4 text-center">
-                <p class="text-black">Não tem uma conta? <a href="/register" class="text-blue-600">Cadastre-se</a></p>
+                <p class="text-black">Não tem uma conta? <a href="{{ route('cadastro') }}" class="text-blue-600">Cadastre-se</a></p>
             </div>
         </form>
     </div>

@@ -69,16 +69,7 @@
                     name="confirmed_password"
                     class="w-full p-3 mt-2 border border-gray-600 rounded-lg text-black"
                     placeholder="Digite sua senha novamente"
-                    value="{{ old('email') }}"
                 >
-            </div>
-
-            <div class="flex justify-between items-center mb-6">
-                <div>
-                    <input type="checkbox" id="remember" name="remember" class="mr-2">
-                    <label for="remember" class="text-black">Lembrar-me</label>
-                </div>
-                <a href="#" class="text-sm text-blue-600">Esqueceu a senha?</a>
             </div>
 
             <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
@@ -86,7 +77,7 @@
             </button>
 
             <div class="mt-4 text-center">
-                <p class="text-black">Não tem uma conta? <a href="/register" class="text-blue-600">Cadastre-se</a></p>
+                <p class="text-black">já tem uma conta? <a href="/register" class="text-blue-600">Entrar</a></p>
             </div>
         </form>
     </div>
