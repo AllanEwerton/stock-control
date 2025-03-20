@@ -76,6 +76,14 @@ class UserContrller extends Controller
         return redirect()->route('dashboard');
     }
 
+    function logout(Request $request)
+    {
+        auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('home');
+    }
+
     /**
      * Exibe o recurso especificado.
      */

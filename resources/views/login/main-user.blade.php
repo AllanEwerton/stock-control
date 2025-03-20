@@ -32,7 +32,7 @@
                         <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">⚙️ <span class="ml-3">Configurações</span></a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-3 text-red-600 rounded-lg hover:bg-red-100">🚪 <span class="ml-3">Sair</span></a>
+                        <a href="{{ route('logout') }}" class="flex items-center p-3 text-red-600 rounded-lg hover:bg-red-100">🚪 <span class="ml-3">Sair</span></a>
                     </li>
                 </ul>
             </nav>

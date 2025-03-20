@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PodutoController;
 use App\Http\Controllers\UserContrller;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +14,10 @@ route::get('/cadastro', function(){
         return view('login.cadastro');})->name('cadastro');
 route::post('/cadastro', [UserContrller::class, 'store'])->name('cadastro.store');
 
-route::get('/logout', [UserContrller::class, 'logout'])->name('logout');
-
-route::get('/dashboard', function(){
+route::middleware('auth')->group(function(){
+    route::get('/dashboard', function(){
         return view('login.dashboard');})->name('dashboard');
+        route::get('/logout', [UserContrller::class, 'logout'])->name('logout');
 
-Route::resource('produtos', PodutoController::class);
+});
+
