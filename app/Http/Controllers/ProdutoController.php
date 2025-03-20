@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produto;
 
-class PodutoController extends Controller
+class ProdutoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,6 +13,12 @@ class PodutoController extends Controller
     public function index()
     {
         //
+    }
+    public function preview(string $id_categoria)
+    {
+        $produtos = Produto::where('id_categoria', $id_categoria)->get();
+        return view('login.categoria-preview-produtos', compact('produtos'));
+
     }
 
     /**

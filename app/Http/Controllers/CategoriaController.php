@@ -39,7 +39,7 @@ class CategoriaController extends Controller
         Categoria::create($categoria);
         return redirect()->route('categorias');
     }
-
+    
     /**
      * Exibe o recurso especificado.
      */

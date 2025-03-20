@@ -13,7 +13,7 @@
         <div id="overlay" class="fixed inset-0 bg-black/50 hidden md:hidden transition-opacity" onclick="toggleMenu()"></div>
 
         <!-- Sidebar -->
-        <aside id="sidebar" class="w-64 bg-gray-950 shadow-lg fixed md:relative md:translate-x-0 -translate-x-full h-full transition-transform duration-300">
+        <aside id="sidebar" class="w-64 bg-gray-950 shadow-lg fixed md:relative md:translate-x-0 -translate-x-full h-full transition-transform duration-300 z-50">
             <div class="p-4 text-center border-b">
                 <h1 class="text-xl font-bold text-gray-200">Painel Admin</h1>
             </div>
@@ -39,20 +39,26 @@
         </aside>
 
         <!-- Área principal -->
-        <main class="flex-1">
+        <main class="flex-1 flex flex-col">
             <!-- Cabeçalho -->
-            <header class="flex justify-between items-center p-6 bg-white shadow-md">
+            <header class="flex justify-between items-center p-6 bg-gray-950 text-white shadow-md">
                 <!-- Botão de menu mobile -->
-                <button class="md:hidden text-gray-200" onclick="toggleMenu()">☰</button>
-                <h2 class="text-xl font-semibold text-gray-200">Dashboard</h2>
-                <div class="flex items-center">
-                    <span class="mr-3 text-gray-00">Olá, Usuário</span>
+                <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
+                <h2 class="text-xl font-semibold">Dashboard</h2>
+                 <a href="">
+                    <div class="flex items-center">
+                    <span class="mr-3">Olá, {{
+                        auth()->user()->name
+                    }}</span>
+
                     <img src="{{ asset('asset/images/log-white.png.png') }}" class="w-10 h-10 rounded-full border" alt="Avatar">
-                </div>
+                </div></a>
             </header>
 
             <!-- Conteúdo -->
-            @yield('contentUser')
+            <div class="flex-1 p-6 overflow-y-auto">
+                @yield('contentUser')
+            </div>
         </main>
     </div>
 
