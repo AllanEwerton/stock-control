@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>@yield('title')</title>
+    <title>@yield('title', 'Painel Admin')</title>
 </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
@@ -20,13 +20,13 @@
             <nav class="p-4">
                 <ul>
                     <li class="mb-2">
-                        <a href="" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📊 <span class="ml-3">Central</span></a>
+                        <a href="{{ route('dashboard') }}" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📈 <span class="ml-3">Central</span></a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📁 <span class="ml-3">Produtos</span></a>
+                        <a href="{{ route('categorias') }}" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">🗂️ <span class="ml-3">Categoria</span></a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📁 <span class="ml-3">Categoria</span></a>
+                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📦 <span class="ml-3">Produtos</span></a>
                     </li>
                     <li class="mb-2">
                         <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">⚙️ <span class="ml-3">Configurações</span></a>

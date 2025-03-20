@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UserContrller;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,11 @@ route::post('/cadastro', [UserContrller::class, 'store'])->name('cadastro.store'
 route::middleware('auth')->group(function(){
     route::get('/dashboard', function(){
         return view('login.dashboard');})->name('dashboard');
+
+    route::get('/categorias', [CategoriaController::class, 'index'])->name('categorias');
+    route::get('/categorias/create', [CategoriaController::class, 'create'])->name('categorias.create');
+    route::post('/categorias/store', [CategoriaController::class, 'store'])->name('categorias.store');
+
         route::get('/logout', [UserContrller::class, 'logout'])->name('logout');
 
 });

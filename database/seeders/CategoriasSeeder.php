@@ -12,6 +12,12 @@ class CategoriasSeeder extends Seeder
      */
     public function run(): void
     {
-        Categoria::factory(5)->create();
+        Categoria::create(['nome' => 'Roupas', 'descricao' => 'Roupas em geral']);
+        Categoria::create(['nome' => 'Eletrônicos', 'descricao' => 'Eletrônicos em geral']);
+        Categoria::create(['nome' => 'Informática', 'descricao' => 'Informática em geral',]);
+        Categoria::create(['nome' => 'Livros', 'descricao' => 'Livros em geral', ]);
+        Categoria::create(['nome' => 'Esportes', 'descricao' => 'Esportes em geral', ]);
+        Categoria::create(['nome' => 'Alimentos', 'descricao' => 'Alimentos em geral', ]);
+
     }
 }

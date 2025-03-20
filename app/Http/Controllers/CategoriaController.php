@@ -8,31 +8,40 @@ use Illuminate\Http\Request;
 class CategoriaController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Exibe uma lista do recurso.
      */
     public function index()
     {
-        //
+        $categorias = Categoria::all();
+        return view('login.categoria', compact('categorias'));
+
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Mostra o formulário para criar um novo recurso.
      */
     public function create()
     {
-        //
+        return view('login.categoria-create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Armazena um recurso recém-criado no armazenamento.
      */
     public function store(Request $request)
     {
-        //
+        $categoria =  $request->validate([
+            'nome' => 'required',
+        ]
+        ,[
+            'nome.required' => 'O campo nome é obrigatório',
+        ]);
+        Categoria::create($categoria);
+        return redirect()->route('categorias');
     }
 
     /**
-     * Display the specified resource.
+     * Exibe o recurso especificado.
      */
     public function show(Categoria $categoria)
     {
@@ -40,7 +49,7 @@ class CategoriaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Mostra o formulário para editar o recurso especificado.
      */
     public function edit(Categoria $categoria)
     {
@@ -48,7 +57,7 @@ class CategoriaController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Atualiza o recurso especificado no armazenamento.
      */
     public function update(Request $request, Categoria $categoria)
     {
@@ -56,7 +65,7 @@ class CategoriaController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove o recurso especificado do armazenamento.
      */
     public function destroy(Categoria $categoria)
     {
