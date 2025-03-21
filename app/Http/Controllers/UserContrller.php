@@ -14,6 +14,7 @@ class UserContrller extends Controller
      */
     public function index()
     {
+        
         return view('login.login');
     }
     public function login(Request $request)
@@ -28,9 +29,8 @@ class UserContrller extends Controller
             'password.min' => 'O campo senha deve ter no mínimo 6 caracteres',
         ]);
         if (auth::attempt($credencias, $request->remember)) {
-            $request->session()->regenerate();
-            return redirect()->route('dashboard');
-
+           $request->session()->regenerate();
+              return redirect()->intended(route('dashboard'));
         }
         return back()->withErrors([
             'erroes' => 'As credencias fornecidas não correspondem aos nossos registros.',
@@ -76,9 +76,9 @@ class UserContrller extends Controller
         return redirect()->route('dashboard');
     }
 
-    function logout(Request $request)
+    public function logout(Request $request)
     {
-        auth::logout();
+        Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect()->route('home');

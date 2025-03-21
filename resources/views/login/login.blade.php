@@ -50,9 +50,9 @@
             </div>
 
             <div class="flex justify-between items-center mb-6">
-                <div>
-                    <input type="checkbox" id="remember" name="remember" class="mr-2">
-                    <label for="remember" class="text-black">Lembrar-me</label>
+                <div class="flex items-center">
+                    <input type="checkbox" id="remember" name="remember" class="remember mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="remember" class="text-sm text-black">Lembrar-me</label>
                 </div>
                 <a href="#" class="text-sm text-blue-600">Esqueceu a senha?</a>
             </div>

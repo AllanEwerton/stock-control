@@ -26,7 +26,7 @@
                         <a href="{{ route('categorias') }}" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">🗂️ <span class="ml-3">Categoria</span></a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📦 <span class="ml-3">Produtos</span></a>
+                        <a href="{{ route('produtos') }}" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">📦 <span class="ml-3">Produtos</span></a>
                     </li>
                     <li class="mb-2">
                         <a href="#" class="flex items-center p-3 text-gray-200 rounded-lg hover:bg-blue-100">⚙️ <span class="ml-3">Configurações</span></a>
@@ -44,7 +44,7 @@
             <header class="flex justify-between items-center p-6 bg-gray-950 text-white shadow-md">
                 <!-- Botão de menu mobile -->
                 <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
-                <h2 class="text-xl font-semibold">Dashboard</h2>
+                <h2 class="text-xl font-semibold">@yield('painel')</h2>
                  <a href="">
                     <div class="flex items-center">
                     <span class="mr-3">Olá, {{

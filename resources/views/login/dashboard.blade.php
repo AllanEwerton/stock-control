@@ -1,5 +1,6 @@
 @extends('login.main-user')
 @section('title', 'Dashboard')
+@section('painel', 'Central')
 @section('contentUser')
 
             <!-- Conteúdo -->

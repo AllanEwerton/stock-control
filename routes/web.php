@@ -25,6 +25,8 @@ route::middleware('auth')->group(function(){
     route::post('/categorias/store', [CategoriaController::class, 'store'])->name('categorias.store');
     route::get('/categorias/preview/{id}', [ProdutoController::class, 'preview'])->name('categorias.preview');
 
+    route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos');
+
         route::get('/logout', [UserContrller::class, 'logout'])->name('logout');
 
 });

@@ -1,5 +1,6 @@
 @extends('login.main-user')
 @section('title', 'Dashboard')
+@section('painel', 'Categoria')
 @section('contentUser')
 <section class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
     @foreach ($categorias as $categoria)

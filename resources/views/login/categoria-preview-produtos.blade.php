@@ -1,5 +1,6 @@
 @extends('login.main-user')
 @section('title', 'Produtos por Categoria')
+@section('painel', 'Produtos por Categoria')
 @section('contentUser')
 <section class="p-4 sm:p-6 space-y-4 sm:space-y-6">
     @foreach ($produtos as $produto)

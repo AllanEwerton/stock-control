@@ -12,7 +12,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        //
+        $produtos = Produto::all();
+        return view('login.produtos', compact('produtos'));
     }
     public function preview(string $id_categoria)
     {
